@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'club.cafedevelopment'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    exclude 'club/cafedevelopment/blitzlite/example' // Will exclude the example package so that it doesn't get added into the jar.
+}
